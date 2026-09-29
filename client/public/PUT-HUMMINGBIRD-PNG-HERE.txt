@@ -1,0 +1,3 @@
+Save your hummingbird photo in this folder as:  hummingbird.png
+Use a PNG with a transparent background, with the bird facing right (like the reference design).
+If the file is missing, the welcome page shows the drawn bird instead.
