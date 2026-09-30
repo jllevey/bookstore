@@ -77,24 +77,22 @@ export default function Books() {
       <p className="text-muted small">{books.length} {books.length === 1 ? 'book' : 'books'} found</p>
       {books.length === 0 && !error && <p className="text-muted">No books match your search. Try a different title, author or genre.</p>}
 
-      <div className="row g-4">
+      <div className="book-grid">
         {books.map((b, i) => (
-          <div className="col-6 col-md-4 col-lg-3" key={b._id}>
-            <div className="book-tile rise-in" style={{ animationDelay: `${Math.min(i, 12) * 55}ms` }}>
-              <Link to={`/books/${b._id}`} className="book-link">
-                <div className="cover-wrap"><Cover book={b} /></div>
-                <div className="ledge" />
-                <div className="meta">
-                  <div className="fw-bold title-line">{b.title}</div>
-                  <div className="small text-muted">{b.author}</div>
-                  <div className="d-flex justify-content-between mt-1">
-                    <span>{inr(b.price)}</span>
-                    <span className={`small ${b.available ? 'text-success' : 'text-danger'}`}>{b.available ? 'In stock' : 'Out of stock'}</span>
-                  </div>
+          <div className="book-tile rise-in" key={b._id} style={{ animationDelay: `${Math.min(i, 12) * 55}ms` }}>
+            <Link to={`/books/${b._id}`} className="book-link">
+              <div className="cover-wrap"><Cover book={b} /></div>
+              <div className="ledge" />
+              <div className="meta">
+                <div className="fw-bold title-line">{b.title}</div>
+                <div className="small text-muted">{b.author}</div>
+                <div className="d-flex justify-content-between mt-1">
+                  <span>{inr(b.price)}</span>
+                  <span className={`small ${b.available ? 'text-success' : 'text-danger'}`}>{b.available ? 'In stock' : 'Out of stock'}</span>
                 </div>
-              </Link>
-              {canBuy && <AddButton book={b} />}
-            </div>
+              </div>
+            </Link>
+            {canBuy && <AddButton book={b} />}
           </div>
         ))}
       </div>
