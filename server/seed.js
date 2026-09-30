@@ -77,7 +77,16 @@ const raw = [
   ['The Little Prince', 'Antoine de Saint-Exupéry', 'Children', 199, 20, 'A pilot meets a small prince from another planet in the desert.'],
   ["Charlotte's Web", 'E. B. White', 'Children', 249, 14, 'A spider saves her friend, a pig, with words woven into her web.'],
   ['Matilda', 'Roald Dahl', 'Children', 249, 11, 'A clever girl with a special gift takes on cruel adults.'],
-  ['Swami and Friends', 'R. K. Narayan', 'Children', 225, 10, 'The adventures of a schoolboy and his friends in Malgudi.']
+  ['Swami and Friends', 'R. K. Narayan', 'Children', 225, 10, 'The adventures of a schoolboy and his friends in Malgudi.'],
+
+  ['Thirukkural', 'Thiruvalluvar', 'Tamil Literature', 249, 22, 'The classic Tamil work of 1,330 couplets on virtue, wealth and love.'],
+  ['Aathichudi', 'Avvaiyar', 'Tamil Literature', 149, 18, 'Short one-line sayings for children, teaching values in simple Tamil.'],
+  ['Bharathiyar Kavithaigal', 'Subramania Bharati', 'Tamil Literature', 279, 12, 'A collection of patriotic and devotional Tamil poems by Bharathiyar.'],
+  ['Tamil Siruvar Paadalgal', 'Various', 'Tamil Literature', 199, 20, 'A collection of Tamil songs and rhymes for young children.'],
+  ['Kavithai Malargal', 'Kannadasan', 'Tamil Literature', 259, 10, 'A garland of Tamil poems and film lyrics by the poet Kannadasan.'],
+  ['Tamil Thaalattu Paadalgal', 'Various', 'Tamil Literature', 179, 15, 'Traditional Tamil lullabies and cradle songs for babies and toddlers.'],
+  ['Silappathikaram (Simplified)', 'Ilango Adigal', 'Tamil Literature', 299, 8, 'A simplified retelling of the classic Tamil epic of Kannagi.'],
+  ['Tamil Kuzhandhai Paadalgal', 'Various', 'Tamil Literature', 189, 16, 'Playful Tamil nursery rhymes and action songs for young readers.']
 ];
 
 (async () => {
