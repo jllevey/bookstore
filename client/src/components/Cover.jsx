@@ -5,7 +5,8 @@ const PALETTE = {
   Fiction: ['#17352e', '#c9a24b'], Fantasy: ['#3b2a5a', '#e0c36a'], Mystery: ['#1f2a44', '#d9d9d9'],
   'Sci-Fi': ['#0f3b4a', '#7fe0d0'], Romance: ['#7a2432', '#f3d9c4'], 'Self-Help': ['#a85a16', '#fff3d6'],
   Biography: ['#4a3728', '#e8d5a9'], History: ['#5b4a2e', '#f0e2b6'], Science: ['#12304d', '#9ad0ff'],
-  Technology: ['#1c1c28', '#5ee0a0'], Business: ['#2f4a2f', '#f3e6b0'], Children: ['#c9651b', '#ffffff']
+  Technology: ['#1c1c28', '#5ee0a0'], Business: ['#2f4a2f', '#f3e6b0'], Children: ['#c9651b', '#ffffff'],
+  'Tamil Literature': ['#7a3b12', '#ffe9b8']
 };
 export const colorsFor = (genre) => PALETTE[genre] || ['#17352e', '#c9a24b'];
 
@@ -62,9 +63,11 @@ export default function Cover({ book, size = 'M', className = '' }) {
   }, [book._id, book.coverUrl, book.title, book.author, size]);
 
   const [bg, fg] = colorsFor(book.genre);
+  const tamil = book.genre === 'Tamil Literature';
   return (
     <div className={`cover-box ${className}`}>
-      <div className="cover-fallback" style={{ background: `linear-gradient(135deg, ${bg}, ${bg}e6)`, color: fg, borderLeftColor: fg }}>
+      <div className={`cover-fallback ${tamil ? 'cf-tamil' : ''}`} style={{ background: `linear-gradient(135deg, ${bg}, ${bg}e6)`, color: fg, borderLeftColor: fg }}>
+        {tamil && <span className="cf-motif" aria-hidden="true">அ</span>}
         <span className="cf-genre">{book.genre}</span>
         <span className="cf-title">{book.title}</span>
         <span className="cf-rule" style={{ background: fg }} />

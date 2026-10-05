@@ -93,10 +93,10 @@ main.container { position: relative; z-index: 1; }
 .chip:hover { background: rgba(23, 53, 46, .12); }
 .chip.on { background: var(--library); color: var(--foil); }
 
-.book-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem 1rem; }
+.book-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 2rem 1.25rem !important; }
 .book-tile { height: 100%; padding: .7rem .7rem .8rem; min-width: 0; }
-@media (min-width: 576px) { .book-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
-@media (min-width: 992px) { .book-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 576px) { .book-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 2rem !important; } }
+@media (min-width: 992px) { .book-grid { grid-template-columns: repeat(4, 1fr) !important; } }
 @media (max-width: 767.98px) { .book-tile .btn { padding: .5rem .5rem; font-size: .85rem; } }
 .book-link { display: block; color: inherit; text-decoration: none; }
 .cover-wrap { position: relative; transform-origin: left center; transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; box-shadow: 3px 5px 10px rgba(0, 0, 0, .22); }
@@ -111,6 +111,8 @@ main.container { position: relative; z-index: 1; }
 .cover-fade { animation: fadeIn .6s ease-out both; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .cover-fallback { position: absolute; inset: 0; border-left: 7px solid; display: flex; flex-direction: column; justify-content: center; gap: .55rem; padding: 1rem .9rem 1rem 1.1rem; overflow: hidden; }
+.cf-tamil { background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, .05) 0 2px, transparent 2px 18px); }
+.cf-motif { position: absolute; right: -6px; bottom: -14px; font-family: 'Newsreader', serif; font-size: 6rem; font-weight: 700; opacity: .14; line-height: 1; pointer-events: none; }
 .cf-genre { font-size: .75rem; opacity: .85; }
 .cf-title { font-family: 'Newsreader', serif; font-weight: 700; font-size: clamp(1rem, 2.2vw, 1.3rem); line-height: 1.15; overflow-wrap: anywhere; }
 .cf-rule { display: block; width: 36px; height: 2px; }
